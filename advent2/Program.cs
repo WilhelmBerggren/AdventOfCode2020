@@ -6,7 +6,6 @@ var data = File.ReadAllText(Environment.CurrentDirectory + "/input2.txt");
 
 var pwds = data.Split(Environment.NewLine).Where(s => s.Trim() != "");
 
-var count = 0;
 foreach (var p in pwds) {
     var parts = p.Split(" ");
     var limits = parts[0].Split("-");
