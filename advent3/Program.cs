@@ -10,24 +10,19 @@ var rows = data
     .ToArray();
 
 var width = rows[0].Length;
+var height = rows.Length;
 
-Func<int, int, int> GetHits = (dx, dy) => {
-    var x = 0;
-    var y = 0;
-    var hits = 0;
-    for (int i = 0; i < rows.Length; i++)
-    {
-        x = i * dx % width;
-        y = i * dy;
-        if (y > rows.Length) return hits;
-        if (rows[y][x] == '#') hits++;
-    }
-    return hits;
-};
+var pairs = new (int dx, int dy)[] { (1, 1), (3, 1), (5, 1), (7, 1), (1, 2) };
 
-var answers = new (int dx, int dy)[] { (1, 1), (3, 1), (5, 1), (7, 1), (1, 2) }
-    .Select(pair => GetHits(pair.dx, pair.dy));
+var ans = 
+    from pair in pairs
+    from row in rows.Select((row, index) => new {row, index})
+    let x = row.index * pair.dx % width
+    let y = row.index * pair.dy
+    where y <= width
+    where rows[y][x] == '#'
+    group true by pair into hits
+    select hits.Count();
 
-var sum = answers.Select(x => (long) x).Aggregate((acc, x) => acc * x);
-
+var sum = ans.Select(a => (long) a).Aggregate((acc, i) => acc * i);
 System.Console.WriteLine(sum);
