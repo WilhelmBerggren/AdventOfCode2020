@@ -1,9 +1,9 @@
-(def data (str/split (slurp "../inputs/input6.txt") #"\n\n"))
+(def data (str/split (slurp "../inputs/input6.txt") #"\R\R"))
 
-(def groups (map #(set (str/split % #"\s")) data))
+(def groups (map #(map set (str/split-lines %)) data))
 
-(def part1 (reduce + (map #(count (apply set/union (map set %))) groups)))
+(def part1 (apply + (map #(count (apply set/union %)) groups)))
 
-(def part2 (reduce + (map #(count (apply set/intersection (map set %))) groups)))
+(def part2 (apply + (map #(count (apply set/intersection %)) groups)))
 
 [part1 part2]
