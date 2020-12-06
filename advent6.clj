@@ -2,9 +2,7 @@
 
 (def groups (map #(set (str/split % #"\s")) data))
 
-(defn distinct-qs [group] (distinct (str/join "" group)))
-
-(def part1 (reduce + (map #(count (distinct-qs %)) groups)))
+(def part1 (reduce + (map #(count (distinct (str/join "" %))) groups)))
       
 (def part2 (reduce + (map #(count (apply set/intersection (map set %))) groups)))
 
