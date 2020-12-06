@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 
 var groups = File
-    .ReadAllText(Environment.CurrentDirectory + "/../input6.txt")
+    .ReadAllText(Environment.CurrentDirectory + "/../../inputs/input6.txt")
     .Split(Environment.NewLine + Environment.NewLine)
     .Select(group => group.Split(Environment.NewLine));
 

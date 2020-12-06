@@ -1,6 +1,6 @@
 (let [vals (map 
              #(Integer/parseInt %) 
-             (str/split (slurp "input1.txt") #"\n"))]
+             (str/split (slurp "../input1.txt") #"\n"))]
   (first 
     (for [x vals
           y vals

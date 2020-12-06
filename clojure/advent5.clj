@@ -1,4 +1,4 @@
-(def data (str/split (slurp "input5.txt") #"\n"))
+(def data (str/split (slurp "../input5.txt") #"\n"))
 
 (defn to-int [item]
   (Integer/parseInt 

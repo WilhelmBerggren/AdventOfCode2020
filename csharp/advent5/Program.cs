@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-var data = File.ReadAllText(Environment.CurrentDirectory + "/../input5.txt").Split("\n");
+var data = File.ReadAllText(Environment.CurrentDirectory + "/../../inputs/input5.txt").Split("\n");
 
 var ids = data.Select(item => {
     var row = Convert.ToInt32(item.Substring(0, 7).Replace('F', '0').Replace('B', '1'), 2);

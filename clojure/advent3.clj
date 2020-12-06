@@ -1,4 +1,4 @@
-(def data (map seq (str/split (slurp "input3.txt") #"\n")))
+(def data (map seq (str/split (slurp "../input3.txt") #"\n")))
 
 (def height (count data))
 (def width (count (first data)))
