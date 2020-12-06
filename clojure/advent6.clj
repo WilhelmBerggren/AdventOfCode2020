@@ -1,4 +1,4 @@
-(def data (str/split (slurp "../input6.txt") #"\n\n"))
+(def data (str/split (slurp "../inputs/input6.txt") #"\n\n"))
 
 (def groups (map #(set (str/split % #"\s")) data))
 
