@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-var data = File.ReadAllText(Environment.CurrentDirectory + "/../input3.txt");
+var data = File.ReadAllText(Environment.CurrentDirectory + "/../../inputs/input3.txt");
 
 var rows = data
     .Split(Environment.NewLine)

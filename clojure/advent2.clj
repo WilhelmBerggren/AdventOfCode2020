@@ -1,4 +1,4 @@
-(def data (str/split (slurp "input2.txt") #"\n"))
+(def data (str/split (slurp "../inputs/input2.txt") #"\n"))
 
 (def ans 
   (for [val data

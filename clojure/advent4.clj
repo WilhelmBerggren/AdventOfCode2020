@@ -1,4 +1,4 @@
-(def data (str/split (slurp "input4.txt") #"\n\n"))
+(def data (str/split (slurp "../inputs/input4.txt") #"\n\n"))
 
 (def passports
   (for [passport data

@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-var data = File.ReadAllText(Environment.CurrentDirectory + "/../input1.txt");
+var data = File.ReadAllText(Environment.CurrentDirectory + "/../../inputs/input1.txt");
 var nums = data.Split(Environment.NewLine).Select(s => Int32.Parse(s));
 
 var results = 

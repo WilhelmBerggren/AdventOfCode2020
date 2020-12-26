@@ -2,7 +2,7 @@
 using System.IO;
 using System.Linq;
 
-var data = File.ReadAllText(Environment.CurrentDirectory + "/../input2.txt");
+var data = File.ReadAllText(Environment.CurrentDirectory + "/../../inputs/input2.txt");
 
 var limits = 
     from line in data.Split(Environment.NewLine)
