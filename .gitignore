@@ -5,6 +5,7 @@
 
 # Clojure
 .calva
+.lsp
 
 # User-specific files
 *.rsuser
